@@ -8,13 +8,13 @@ sensors_event_t event;    // create a new event for initialization
 float ZdirAcc = 0.0;    // z direction acceleration
 
 IntervalTimer SerialTimer;
-const int freqSerial = 300;
+const int freqSerial = 20;
 
 void SerialPrint () {
   Serial.println(ZdirAcc);
 }
 
-void setup(void) 
+void setup ( ) 
 {
   
   /* Initialise the sensor */
@@ -35,9 +35,9 @@ void setup(void)
   Serial.begin(1000000);
 }
 
-void loop(void) 
+void loop ( ) 
 {
-  accel.begin();
+//  accel.begin();
   
   // create new event
   sensors_event_t event;
